@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Untitled Page</title>
+        <meta name="generator" content="WYSIWYG Web Builder 16 - http://www.wysiwygwebbuilder.com">
+        <link href="T3.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <script>
+
+            function ValEmail(correo) {
+                if (correo.value.indexOf("@") == -1) {
+                    alert("Correo no valido, debe contener un @");
+                    correo.focus();
+                    correo.select();
+                }
+            }
+
+            function ValNom(nom) {
+                if (nom.value.length < 10) {
+                    alert("El tamaño del nombre debe contener almenos 10 letras");
+                    nom.focus();
+                    nom.select();
+                }
+            }
+
+            function  escribir (letra){
+                if (document.getElementById("rnom").checked) {
+                    var memoria;
+                    memoria=document.getElementById("nom").value;
+                    memoria=memoria+letra;
+                    document.getElementById("nom").value=memoria;
+                }
+                if (document.getElementById("rpais").checked) {
+                    var memoria;
+                    memoria=document.getElementById("pais").value;
+                    memoria=memoria+letra;
+                    document.getElementById("pais").value=memoria;
+                }
+                if (document.getElementById("rnom_tarje").checked){
+                    var memoria;
+                    memoria=document.getElementById("nom_tarje").value;
+                    memoria=memoria+letra;
+                    document.getElementById("nom_tarje").value=memoria;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="wb_Form1" style="position:absolute;left:268px;top:48px;width:501px;height:295px;z-index:41;">
+                <form name="Form1" method="post" action="mailto:yourname@yourdomain.com" enctype="multipart/form-data" id="Form1">
+
+                    <label for="" id="Label1" style="position:absolute;left:31px;top:23px;width:141px;height:16px;line-height:16px;z-index:0;">Datos del Comprador:</label>
+                    <label for="" id="Label2" style="position:absolute;left:99px;top:47px;width:73px;height:18px;line-height:18px;z-index:1;">Nombre:</label>
+                    <label for="" id="Label5" style="position:absolute;left:99px;top:150px;width:73px;height:18px;line-height:18px;z-index:2;">Pais:</label>
+                    <label for="" id="Label4" style="position:absolute;left:99px;top:115px;width:73px;height:17px;line-height:17px;z-index:3;">Telefono:</label>
+                    <label for="" id="Label3" style="position:absolute;left:99px;top:82px;width:73px;height:17px;line-height:17px;z-index:4;">Email:</label>
+                    <label for="" id="Label6" style="position:absolute;left:31px;top:190px;width:246px;height:16px;line-height:16px;z-index:9;">Datos de la Tarjeta de Credito o Debito:</label>
+                    <label for="" id="Label7" style="position:absolute;left:99px;top:214px;width:73px;height:18px;line-height:18px;z-index:10;">Nombre:</label>
+                    <label for="" id="Label8" style="position:absolute;left:99px;top:248px;width:73px;height:18px;line-height:18px;z-index:12;">Numero:</label>
+
+                    <input type="text" id="pais" style="position:absolute;left:180px;top:150px;width:269px;height:16px;z-index:5;" name="pais" value="" spellcheck="false">
+                    <input type="number" id="tel" style="position:absolute;left:180px;top:115px;width:269px;height:16px;z-index:6;" name="tel" value="" spellcheck="false">
+                    <input type="text" id="nom" onchange="return ValNom(this)" style="position:absolute;left:180px;top:47px;width:269px;height:16px;z-index:7;" name="nom" value="" spellcheck="false">
+                    <input type="email" id="email" onchange="return ValEmail(this)"style="position:absolute;left:180px;top:81px;width:269px;height:16px;z-index:8;" name="email" value="" spellcheck="false">
+                    <input type="text" id="nom_tarje" style="position:absolute;left:180px;top:214px;width:269px;height:16px;z-index:11;" name="nom_tarje" value="" spellcheck="false">
+                    <input type="number" id="num_tarje" style="position:absolute;left:180px;top:248px;width:269px;height:16px;z-index:13;" name="num_tarje" value="" spellcheck="false">
+
+                </form>
+            </div>
+            <div id="wb_Form2" style="position:absolute;left:268px;top:380px;width:501px;height:174px;z-index:42;">
+                <form name="Form2" method="post" action="mailto:yourname@yourdomain.com" enctype="multipart/form-data" id="Form2">
+
+                    <input type="button" onclick="escribir('o')" id="o" name="o" value="O" style="position:absolute;left:385px;top:16px;width:34px;height:27px;z-index:14;">
+                    <input type="button" onclick="escribir('d')" id="d" name="d" value="D" style="position:absolute;left:131px;top:55px;width:34px;height:27px;z-index:15;">
+                    <input type="button" onclick="escribir('k')" id="k" name="k" value="K" style="position:absolute;left:360px;top:54px;width:34px;height:27px;z-index:16;">
+                    <input type="button" onclick="escribir('j')" id="j" name="j" value="J" style="position:absolute;left:314px;top:55px;width:34px;height:27px;z-index:17;">
+                    <input type="button" onclick="escribir('i')" id="i" name="i" value="I" style="position:absolute;left:340px;top:17px;width:34px;height:27px;z-index:18;">
+                    <input type="button" onclick="escribir('s')" id="s" name="s" value="S" style="position:absolute;left:85px;top:55px;width:34px;height:27px;z-index:19;">
+                    <input type="button" onclick="escribir('v')" id="v" name="v" value="V" style="position:absolute;left:213px;top:97px;width:34px;height:27px;z-index:20;">
+                    <input type="button" onclick="escribir('x')" id="x" name="x" value="X" style="position:absolute;left:122px;top:97px;width:34px;height:27px;z-index:21;">
+                    <input type="button" onclick="escribir('q')" id="q" name="q" value="Q" style="position:absolute;left:19px;top:17px;width:34px;height:27px;z-index:22;">
+                    <input type="button" onclick="escribir('a')" id="a" name="A" value="A" style="position:absolute;left:39px;top:55px;width:34px;height:27px;z-index:23;">
+                    <input type="button" onclick="escribir('w')" id="w" name="w" value="W" style="position:absolute;left:65px;top:16px;width:34px;height:27px;z-index:24;">
+                    <input type="button" onclick="escribir('e')" id="e" name="e" value="E" style="position:absolute;left:111px;top:17px;width:34px;height:27px;z-index:25;">
+                    <input type="button" onclick="escribir('r')" id="r" name="r" value="R" style="position:absolute;left:156px;top:17px;width:34px;height:27px;z-index:26;">
+                    <input type="button" onclick="escribir('t')" id="t" name="t" value="T" style="position:absolute;left:203px;top:16px;width:34px;height:27px;z-index:27;">
+                    <input type="button" onclick="escribir('y')" id="y" name="y" value="Y" style="position:absolute;left:249px;top:16px;width:34px;height:27px;z-index:28;">
+                    <input type="button" onclick="escribir('u')" id="u" name="u" value="U" style="position:absolute;left:294px;top:17px;width:34px;height:27px;z-index:29;">
+                    <input type="button" onclick="escribir('g')" id="g" name="g" value="G" style="position:absolute;left:223px;top:55px;width:34px;height:27px;z-index:30;">
+                    <input type="button" onclick="escribir('p')" id="p" name="p" value="P" style="position:absolute;left:431px;top:17px;width:34px;height:27px;z-index:31;">
+                    <input type="button" onclick="escribir('l')" id="l" nameo="l" value="L" style="position:absolute;left:405px;top:54px;width:34px;height:27px;z-index:32;">
+                    <input type="button" onclick="escribir('n')" id="n" name="n" value="N" style="position:absolute;left:308px;top:97px;width:34px;height:27px;z-index:33;">
+                    <input type="button" onclick="escribir('f')" id="f" name="f" value="F" style="position:absolute;left:176px;top:57px;width:34px;height:27px;z-index:34;">
+                    <input type="button" onclick="escribir('h')" id="h" name="h" value="H" style="position:absolute;left:269px;top:54px;width:34px;height:27px;z-index:35;">
+                    <input type="button" onclick="escribir('z')" id="z" name="z" value="Z" style="position:absolute;left:76px;top:97px;width:34px;height:27px;z-index:36;">
+                    <input type="button" onclick="escribir('b')" id="b" name="b" value="B" style="position:absolute;left:260px;top:97px;width:34px;height:27px;z-index:37;">
+                    <input type="button" onclick="escribir('c')" id="c" name="c" value="C" style="position:absolute;left:168px;top:97px;width:34px;height:27px;z-index:38;">
+                    <input type="button" onclick="escribir('m')" id="m" name="m" value="M" style="position:absolute;left:351px;top:97px;width:34px;height:27px;z-index:39;">
+
+                    <label for="" id="L1" style="position:absolute;left:10px;top:150px;width:141px;height:16px;line-height:16px;z-index:0;">editar nombre:</label>
+                    <label for="" id="L2" style="position:absolute;left:170px;top:150px;width:141px;height:16px;line-height:16px;z-index:0;">editar país:</label>
+                    <label for="" id="L3" style="position:absolute;left:300px;top:150px;width:160px;height:16px;line-height:16px;z-index:0;">editar nombre de tarjeta:</label>
+
+                    <input type="radio" id="rnom" name="rad" style="position:absolute;left:40px;top:140px;width:125px;height:27px;z-index:40;">                    
+                    <input type="radio" id="rpais" name="rad" style="position:absolute;left:180px;top:140px;width:125px;height:27px;z-index:40;">                    
+                    <input type="radio" id="rnom_tarje" name="rad" style="position:absolute;left:390px;top:140px;width:125px;height:27px;z-index:40;">
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
